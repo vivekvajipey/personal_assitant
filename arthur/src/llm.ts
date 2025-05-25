@@ -51,10 +51,10 @@ async function generateAnthropicReply(text: string, system: string, apiKey: stri
       return textBlock.text.trim();
     }
     
-    return "hmm, something went wrong with claude";
+    return "hmm, something went wrong with anthropic";
   } catch (error) {
     console.error("Anthropic API error:", error);
-    return "sorry, claude is having trouble right now";
+    return "sorry, anthropic is having trouble right now";
   }
 }
 
@@ -76,6 +76,6 @@ async function generateOpenAIReply(text: string, system: string, apiKey: string)
     return res.choices[0]?.message?.content?.trim() ?? "sorry, got no response from gpt";
   } catch (error) {
     console.error("OpenAI API error:", error);
-    return "sorry, gpt is having trouble right now";
+    return "sorry, openai is having trouble right now";
   }
 } 
